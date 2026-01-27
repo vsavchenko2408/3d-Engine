@@ -19,13 +19,20 @@
     }
 
 
-    void Field::show_map()
+    void Field::show_map(Player& p)
     {
         for(int y = 0; y < _HEIGHT; y++)
         {
             for(int x = 0; x < _WIDTH; x++)
             {
+                if(p.get_x() == x && p.get_y() == y)
+                {
+                    std::cout << 'P';
+                }
+                else
+                {
                 std::cout << _map[x][y];
+                }
             }
             std::cout << "\n";
         }

@@ -4,5 +4,6 @@
 int main()
 {
     Field f;
-    f.show_map();
+    Player p;
+    f.show_map(p);
 }

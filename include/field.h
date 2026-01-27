@@ -2,6 +2,7 @@
 #define FIELD_H
 #include <vector>
 #include <iostream>
+#include "player.h"
 
 class Field
 {
@@ -11,8 +12,8 @@ class Field
 
     public:
     Field();
-    
-    void show_map();
+
+    void show_map(Player& p);
 };
 
 #endif
