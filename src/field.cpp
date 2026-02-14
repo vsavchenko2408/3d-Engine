@@ -8,18 +8,18 @@
             {
                 if(y == 0 || x == 0 || y == (_HEIGHT-1) || x == (_WIDTH-1))
                 {
-                    _map[x][y] = '#';
+                    _map[y][x] = '#';
                 }
                 else
                 {
-                    _map[x][y] = ' ';
+                    _map[y][x] = ' ';
                 }
             }
         }
     }
 
 
-    void Field::show_map(Player& p)
+    void Field::show_map(Player& p) const
     {
         for(int y = 0; y < _HEIGHT; y++)
         {
