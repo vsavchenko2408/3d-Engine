@@ -12,7 +12,7 @@ class Field
 
     public:
     Field();
-
+    bool is_wall(int x, int y) const;
     void show_map(Player& p);
 };
 

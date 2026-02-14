@@ -6,7 +6,7 @@
         {
             for(int x = 0; x < _WIDTH; x++)
             {
-                if(y == 0 || x == 0 || y == (_WIDTH-1) || x == (_HEIGHT-1))
+                if(y == 0 || x == 0 || y == (_HEIGHT-1) || x == (_WIDTH-1))
                 {
                     _map[x][y] = '#';
                 }
@@ -31,10 +31,19 @@
                 }
                 else
                 {
-                std::cout << _map[x][y];
+                std::cout << _map[y][x];
                 }
             }
             std::cout << "\n";
         }
         
     }
+
+        bool Field::is_wall(int x, int y) const
+        {
+            if(x<0 || y < 0 || x>= _WIDTH || y >= _HEIGHT)
+            {
+                return true;
+            }
+            return _map[y][x] == '#';
+        }
